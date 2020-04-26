@@ -1,5 +1,7 @@
 # Stanford's CS194a
 
+Auditing CS194a spring 2020 ~ 
+
 in-class: Creating number game app 
 
 <b>Assignment #1: Tip Calculator </b>
