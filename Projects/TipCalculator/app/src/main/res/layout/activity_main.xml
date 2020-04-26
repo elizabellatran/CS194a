@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--left side-->
+    <TextView
+        android:id="@+id/baseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Base"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/percentLabel"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="15%"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/baseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/baseLabel" />
+
+    <TextView
+        android:id="@+id/tipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Tip"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/baseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/percentLabel" />
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/baseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tipLabel" />
+
+    <TextView
+        android:id="@+id/numPeopleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Num of\nPeople"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@id/baseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/totalLabel" />
+
+    <TextView
+        android:id="@+id/eachLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total per\nPerson"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@id/baseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/numPeopleLabel" />
+
+    <!--right side-->
+
+    <EditText
+        android:id="@+id/editBase"
+        android:layout_width="264dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        app:layout_constraintBaseline_toBaselineOf="@id/baseLabel"
+        app:layout_constraintStart_toEndOf="@+id/baseLabel" />
+
+    <SeekBar
+        android:id="@+id/seekBarTip"
+        android:layout_width="270dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@id/percentLabel"
+        app:layout_constraintStart_toEndOf="@+id/percentLabel"
+        app:layout_constraintTop_toTopOf="@id/percentLabel"
+        app:layout_goneMarginStart="32dp" />
+
+    <TextView
+        android:id="@+id/tvTipDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/seekBarTip"
+        app:layout_constraintStart_toStartOf="@id/seekBarTip"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
+        tools:text="Acceptable" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="0.00"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tipLabel"
+        app:layout_constraintStart_toEndOf="@+id/tipLabel"
+        app:layout_constraintTop_toTopOf="@id/tipLabel" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="0.00"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/totalLabel"
+        app:layout_constraintStart_toEndOf="@+id/totalLabel"
+        app:layout_constraintTop_toTopOf="@id/totalLabel" />
+
+
+    <EditText
+        android:id="@+id/editNumPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/numPeopleLabel"
+        app:layout_constraintStart_toEndOf="@+id/numPeopleLabel" />
+
+    <TextView
+        android:id="@+id/tvSplitTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="0.00"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/eachLabel"
+        app:layout_constraintStart_toEndOf="@+id/eachLabel"
+        app:layout_constraintTop_toTopOf="@id/eachLabel" />
+
+    <!--footerview-->
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="cursive"
+        android:text="Elizabeth made this app ☠"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="232dp"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
