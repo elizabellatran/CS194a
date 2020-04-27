@@ -18,20 +18,21 @@ The following **required** functionality is completed:
 The following **extensions** are implemented:
 
 * [X] Custom colors palette selected
-* [X] Split functionality
-* [X] Clear all
+* [X] Split total functionality
+* [X] Clear all functionality
 
 ## Video Walkthrough
 
+
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/hoqA0Tv.gif' title='Tip Calculator Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
-## Notesx
+## Notes
 
-Describe any challenges encountered while building the app.
+It was frustrating setting up and working with the constraint layout. The custom color palette functionality was really cool!
 
 ## License
 
